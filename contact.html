@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Packers & Movers</title>
+    <link rel="stylesheet" href="contact.css">
+<script>
+        // Function to check user location
+        async function checkUserLocation() {
+            try {
+                // Fetch location data from ipinfo.io
+                const response = await fetch('https://ipinfo.io?token=a4e6c1274cdd5c');
+                const data = await response.json();
+                const userRegion = data.region; // Get the region from the response
+
+                // Check if the region is Odisha
+                if (userRegion !== "Odisha") {
+                    alert("Sorry, this service is only available for residents of Odisha.");
+                    window.location.href = "https://your-alternate-url.com"; // Redirect non-Odisha users
+                }
+            } catch (error) {
+                console.error("Error fetching location data:", error);
+                alert("Location verification failed. Access denied.");
+            }
+        }
+
+        // Run location check on page load
+        window.onload = checkUserLocation;
+</script>    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPN81G5QMJ">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YPN81G5QMJ');
+</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html" class="btn">Our Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <h1>Contact Us</h1>
+        <img src="contact.jpg" alt="Contact Image">
+        <p>If you have any questions or would like to get in touch, please contact us...</p>
+    </section>
+    <section class="content2">
+        <h1>Our Offices: </h1>
+        <div class="office-section">
+            <img src="office.jpg" alt="Office Image">
+            <p>Tulsipur, Bijupattnaik Chhak, Cuttack, Odisha, 753008, Ph: <a href="tel:+919777012315">+91 9777012315</a></p>
+            <p>Tankapani Road, Laxmi Vihar, Baragarh, Bhubaneswar, Odisha, 751002, Ph: <a href="tel:+919777012315">+91 9777012315</a></p>
+            <p>Nuapokhari, Revenue Colony, Kunjakanta, Dhenkanal, Odisha, 759001, Ph: <a href="tel:+919777012315">+91 9777012315</a></p>
+            <p>Shital Vihar, Turanga, Angul, Odisha, 759123, Ph: <a href="tel:+919777012315">+91 9777012315</a></p>
+            <p>FM College Road, Manikhamb, Balasore, Odisha, 756001, Ph: <a href="tel:+919777012315">+91 9777012315</a></p>
+        </div>
+    </section>    
+    <footer>
+        <p >Follw us on Facebook: <a href="https://www.facebook.com/relaxpackersmovers?mibextid=ZbWKwL" target="_blank">Relax Packers & Movers </a>
+        </p>
+        <p>Email us at: <a href="mailto:bookrelaxpackers@gmail.com">bookrelaxpackers@gmail.com</a>
+        </p>
+        <p>Contact us: <a href="tel:+919777012315">+91 9777012315</a></p>
+    </footer>
+</body>
+</html>
