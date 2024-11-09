@@ -358,14 +358,6 @@ body {
     color: white;
 }
 /* Adjust popup bar for mobile */
-/* Set popup bar to 100% width and adjust layout for mobile */
-.popup-bar {
-    width: 100%;                        /* Ensure popup bar spans the full viewport */
-    overflow-x: hidden;                 /* Prevent overflow */
-    display: flex;
-    flex-direction: row;                /* Row layout by default */
-    align-items: center;
-}
 
 @media (max-width: 768px) {
     .popup-bar {
@@ -426,16 +418,6 @@ body {
     }
 }
 
-/* Adjust 'Why Choose Us Details' section for mobile */
-/* Restrict width and adjust layout for 'Why Choose Us Details' */
-.why-choose-us-details {
-    width: 100%;                       /* Set width to fit within viewport */
-    overflow-x: hidden;                 /* Prevent horizontal overflow */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;            /* Center contents to prevent overflow */
-}
-
 /* Adjust layout for mobile screens */
 @media (max-width: 768px) {
     .why-choose-us-details {
@@ -478,5 +460,14 @@ body {
 body, html {
     overflow-x: hidden;
 }
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll; /* Allow image to scroll on mobile */
+        background-position: center;   /* Center the image */
+        background-size: cover;        /* Keep image covering the whole background */
+    }
+}
+
 
 
