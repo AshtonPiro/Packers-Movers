@@ -411,16 +411,7 @@ body {
     .logo-image {
         width: 150px;                 /* Scale down logo for mobile */
     }
- .popup-bar {
-    width: 100%;                         /* Full viewport width */
-    overflow-x: hidden;                   /* Avoid horizontal scroll */
-    z-index: 1000;
-}
-
-.popup-bar.show {
-    transform: translateY(0);             /* Ensure it appears */
-}
-
 body, html {
     overflow-x: hidden;}
 }
+
