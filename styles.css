@@ -411,7 +411,5 @@ body {
     .logo-image {
         width: 150px;                 /* Scale down logo for mobile */
     }
-body, html {
-    overflow-x: hidden;}
 }
 
