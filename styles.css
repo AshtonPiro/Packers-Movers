@@ -399,4 +399,40 @@ body {
         animation-duration: 20s; /* Slow down for readability */
     }
 }
+/* Ensure 'Why Choose Us' features stack properly on mobile */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Stack features vertically */
+        align-items: center;    /* Center align for a clean look */
+    }
+    .feature {
+        max-width: 100%;        /* Full width on mobile */
+        text-align: center;     /* Center text for readability */
+    }
+}
+
+/* Adjust 'Why Choose Us Details' section for mobile */
+@media (max-width: 768px) {
+    .why-choose-us-details {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items for better alignment */
+    }
+    .why-choose-us-icons {
+        flex-direction: row;    /* Align icons horizontally if possible */
+        gap: 1rem;
+        justify-content: center; /* Center icons within the container */
+    }
+    .icon-item {
+        flex: 1 1 auto;        /* Allow icons to adjust */
+        text-align: center;     /* Center each icon's content */
+    }
+    .warehouse-image img {
+        width: 90%;            /* Restrict image width to fit on mobile */
+        max-width: 300px;       /* Cap image size */
+    }
+}
+body {
+    overflow-x: hidden;
+}
+
 
