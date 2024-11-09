@@ -91,9 +91,7 @@ footer a {
 }
 
 /* Make sure hero section and footer fit the viewport */
-html, body {
-    height: 100%;
-}
+
 
 .hero {
     min-height: calc(100vh - 70px); /* Adjust height to leave space for the footer */
@@ -411,7 +409,5 @@ body {
     .logo-image {
         width: 150px;                 /* Scale down logo for mobile */
     }
-body, html{
-    overflow-x: hidden;
-}
+
 }
