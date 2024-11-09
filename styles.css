@@ -358,19 +358,25 @@ body {
     color: white;
 }
 /* Adjust popup bar for mobile */
+/* Adjust popup bar for mobile screens to avoid overflow */
 @media (max-width: 768px) {
     .popup-bar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;       /* Stack content vertically */
+        align-items: center;          /* Center align items */
         padding: 0.5rem;
     }
     .popup-logo {
-        width: 150px;
+        width: 150px;                 /* Reduce logo size on smaller screens */
+        margin-bottom: 0.5rem;        /* Add spacing below logo */
     }
-    .scroll-text p {
-        font-size: 0.8rem;
+    .button-group {
+        flex-direction: column;       /* Stack buttons vertically on small screens */
+    }
+    .button-group .btn {
+        margin: 0.25rem 0;            /* Reduce margin for buttons */
     }
 }
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 1.8rem;
@@ -389,7 +395,7 @@ body {
     }
 }
 @media (max-width: 768px) {
-    .features, .about-content {
+    .about-content {
         flex-direction: column;
         align-items: center;
     }
@@ -434,5 +440,22 @@ body {
 body {
     overflow-x: hidden;
 }
+/* Adjust footer layout for mobile screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;       /* Stack footer content vertically */
+        align-items: center;
+        padding: 1.5rem;              /* Adjust padding for better spacing */
+        text-align: center;
+    }
+    .footer-logo {
+        position: static;             /* Remove absolute positioning */
+        margin-bottom: 1rem;          /* Add spacing below the logo */
+    }
+    .logo-image {
+        width: 150px;                 /* Scale down logo for mobile */
+    }
+}
+
 
 
