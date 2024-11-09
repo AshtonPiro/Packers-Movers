@@ -357,3 +357,46 @@ body {
 .popup-bar a {
     color: white;
 }
+/* Adjust popup bar for mobile */
+@media (max-width: 768px) {
+    .popup-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    .popup-logo {
+        width: 150px;
+    }
+    .scroll-text p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .features, .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .scroll-text p {
+        animation-duration: 20s; /* Slow down for readability */
+    }
+}
+
