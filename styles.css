@@ -370,17 +370,4 @@ footer a {
         flex-direction: column;
         align-items: center;
     }
-    .why-choose-us-details {
-        flex-direction: column;
-        align-items: center;
-    }
-    .why-choose-us-icons {
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-    }
-    .warehouse-image img {
-        width: 90%;
-        max-width: 300px;
-    }
 }
