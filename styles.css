@@ -1,4 +1,4 @@
-/* Basic reset */
+ /* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,6 @@ body {
     flex-direction: column;
 }
 
-/* Overlay for Hero Section */
 .overlay {
     position: absolute;
     top: 0;
@@ -73,7 +72,7 @@ body {
     display: flex;
     justify-content: center; /* Center the footer content */
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 0
 }
 
 .footer-logo {
@@ -91,15 +90,19 @@ footer a {
     color: white;
 }
 
-/* Hero Section */
+/* Make sure hero section and footer fit the viewport */
+html, body {
+    height: 100%;
+}
+
 .hero {
     min-height: calc(100vh - 70px); /* Adjust height to leave space for the footer */
     position: relative;
     width: 100%;
     flex: 1;
     background: url('van.jpg') no-repeat center center;
-    background-size: cover; /* Changed to cover for better responsiveness */
-    background-attachment: scroll;
+    background-size: contain; /* Ensures the image fits without zooming */
+    background-attachment: scroll; /* Use 'scroll' instead of 'fixed' to avoid zoom effect */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -109,29 +112,30 @@ footer a {
     color: white;
 }
 
-/* Make sure footer sticks to the bottom */
-html, body {
-    height: 100%;
+/* Ensure footer sticks to the bottom */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Services Section */
 .services {
     text-align: center;
     padding: 2rem;
 }
-
 .services h2 {
     font-size: 3rem;
     color: #823802;
     margin-bottom: 1rem;
 }
-
 .service-cards {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-
 .card {
     background-color: #f9f9f9;
     padding: 1rem;
@@ -139,21 +143,16 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 30%;
     text-align: center;
-    flex: 1 1 calc(33% - 2rem); /* Adjust flex behavior for responsive layout */
-    margin-bottom: 1rem; /* Space out cards */
 }
-
 .card img {
     width: 100%;
     border-radius: 8px;
 }
-
 .card h3 {
     color: #823802;
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
-
 .card p {
     color: #555;
     margin: 0.5rem 0;
@@ -164,32 +163,26 @@ html, body {
     text-align: center;
     padding: 2rem;
 }
-
 .features {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
     gap: 1rem;
 }
-
 .feature {
     text-align: center;
     max-width: 20%;
     padding: 1rem;
-    flex: 1 1 calc(25% - 2rem); /* Flex item behavior for responsiveness */
 }
-
 .feature h3 {
     color: #823802;
     font-size: 1.5rem;
     margin: 0.5rem 0;
 }
-
 .feature p {
     color: #555;
     margin: 0.5rem 0;
 }
-
 /* About Us Section */
 .about-us {
     padding: 2rem;
@@ -200,7 +193,6 @@ html, body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
 }
 
 .about-text {
@@ -249,52 +241,58 @@ html, body {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Why Choose Us Section */
+/*why choose us details */
 .why-choose-us-details {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
-    flex-wrap: wrap; /* Wrap icons on smaller screens */
 }
 
 .why-choose-us-icons {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+    gap: 2rem; /* Increased gap between each icon-item */
 }
 
 .icon-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem; /* Increased gap between icon and text */
     text-align: center;
 }
 
 .feature-icon {
-    font-size: 3rem;
+    font-size: 3rem; /* Larger icon size */
     color: #ff5c0a;
-    border: 3px dashed #ff5c0a;
+    border: 3px dashed #ff5c0a; /* Slightly thicker border */
     border-radius: 50%;
-    padding: 1rem;
+    padding: 1rem; /* Increased padding around the icon */
 }
 
 .icon-item p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Slightly larger text */
     font-weight: bold;
     color: #333;
 }
 
 .warehouse-image img {
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; /* Adjust image width */
     border-radius: 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Popup Bar */
+/*try*/
+.why-choose-us2 {
+    text-align: center;
+    padding: 2rem;
+}
+.why-choose-us2 h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #823802;
+}
 .popup-bar {
     position: fixed;
     top: 0;
@@ -336,76 +334,26 @@ html, body {
 
 .scroll-text p {
     display: inline-block;
+    /* Start further offscreen to create a continuous loop */
     padding-left: 100%;
     animation: scroll-left 15s linear infinite;
-}
-.popup-bar a {
-    color: white;
 }
 
 @keyframes scroll-left {
     0% {
-        transform: translateX(0%);
+        transform: translateX(0%); /* Start off-screen to the right */
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* End off-screen to the left */
     }
 }
 
-/* Responsive Layouts */
-@media (max-width: 1024px) {
-    .service-cards .card {
-        max-width: 45%; /* Two columns for medium screens */
-    }
 
-    .feature {
-        flex: 1 1 calc(33% - 2rem); /* Three columns for medium screens */
-    }
-
-    .about-text h2 {
-        font-size: 2.5rem; /* Smaller for tablets */
-    }
+.popup-bar p {
+    margin: 0;
+    font-size: 2rem;
 }
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem; /* Smaller font size for mobile */
-    }
-    .hero p {
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
-
-    .service-cards {
-        flex-direction: column;
-    }
-
-    .card {
-        max-width: 80%; /* Full width for small screens */
-    }
-
-    .feature {
-        flex: 1 1 100%; /* Stack features on mobile */
-    }
-
-    .about-text h2 {
-        font-size: 2rem; /* Smaller text size */
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .popup-bar {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    .button-group .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
+.popup-bar a {
+    color: white;
 }
