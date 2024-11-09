@@ -369,10 +369,10 @@ body {
         width: 150px;                 /* Reduce logo size on smaller screens */
         margin-bottom: 0.5rem;        /* Add spacing below logo */
     }
-    .button-group {
+    .r1 .button-group {
         flex-direction: column;       /* Stack buttons vertically on small screens */
     }
-    .button-group .btn {
+    .r1 .button-group .btn {
         margin: 0.25rem 0;            /* Reduce margin for buttons */
     }
 }
