@@ -358,24 +358,33 @@ body {
     color: white;
 }
 /* Adjust popup bar for mobile */
-/* Adjust popup bar for mobile screens to avoid overflow */
+/* Set popup bar to 100% width and adjust layout for mobile */
+.popup-bar {
+    width: 100%;                        /* Ensure popup bar spans the full viewport */
+    overflow-x: hidden;                 /* Prevent overflow */
+    display: flex;
+    flex-direction: row;                /* Row layout by default */
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .popup-bar {
-        flex-direction: column;       /* Stack content vertically */
-        align-items: center;          /* Center align items */
-        padding: 0.5rem;
+        flex-direction: column;         /* Stack content vertically on smaller screens */
+        padding: 1rem;
+        align-items: center;
     }
     .popup-logo {
-        width: 150px;                 /* Reduce logo size on smaller screens */
-        margin-bottom: 0.5rem;        /* Add spacing below logo */
+        width: 150px;                   /* Smaller logo for mobile */
+        margin-bottom: 0.5rem;
     }
     .r1 .button-group {
-        flex-direction: column;       /* Stack buttons vertically on small screens */
+        flex-direction: column;         /* Stack buttons on small screens */
     }
     .r1 .button-group .btn {
-        margin: 0.25rem 0;            /* Reduce margin for buttons */
+        margin: 0.25rem 0;
     }
 }
+
 
 @media (max-width: 768px) {
     .hero h1 {
@@ -418,25 +427,36 @@ body {
 }
 
 /* Adjust 'Why Choose Us Details' section for mobile */
+/* Restrict width and adjust layout for 'Why Choose Us Details' */
+.why-choose-us-details {
+    width: 100%;                       /* Set width to fit within viewport */
+    overflow-x: hidden;                 /* Prevent horizontal overflow */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;            /* Center contents to prevent overflow */
+}
+
+/* Adjust layout for mobile screens */
 @media (max-width: 768px) {
     .why-choose-us-details {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;    /* Center items for better alignment */
+        flex-direction: column;         /* Stack items vertically on mobile */
+        align-items: center;
     }
     .why-choose-us-icons {
-        flex-direction: row;    /* Align icons horizontally if possible */
+        flex-direction: row;            /* Align icons in a row if space allows */
         gap: 1rem;
-        justify-content: center; /* Center icons within the container */
+        justify-content: center;
     }
     .icon-item {
-        flex: 1 1 auto;        /* Allow icons to adjust */
-        text-align: center;     /* Center each icon's content */
+        flex: 1 1 auto;
+        text-align: center;
     }
     .warehouse-image img {
-        width: 90%;            /* Restrict image width to fit on mobile */
-        max-width: 300px;       /* Cap image size */
+        width: 90%;                     /* Restrict image width to fit */
+        max-width: 300px;
     }
 }
+
 body {
     overflow-x: hidden;
 }
