@@ -457,9 +457,6 @@ body {
     }
 }
 
-body {
-    overflow-x: hidden;
-}
 /* Adjust footer layout for mobile screens */
 @media (max-width: 768px) {
     .footer {
@@ -477,5 +474,9 @@ body {
     }
 }
 
+/* Prevent any horizontal scroll on the entire page */
+body, html {
+    overflow-x: hidden;
+}
 
 
